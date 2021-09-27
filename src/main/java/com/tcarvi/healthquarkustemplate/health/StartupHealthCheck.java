@@ -2,17 +2,17 @@ package com.tcarvi.healthquarkustemplate.health;
 
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
-import org.eclipse.microprofile.health.Liveness;
+import org.eclipse.microprofile.health.Startup;
 
 import javax.enterprise.context.ApplicationScoped;
 
-@Liveness
+@Startup
 @ApplicationScoped  
-public class LivenessHealthCheck implements HealthCheck {
+public class StartupHealthCheck implements HealthCheck {
 
     @Override
     public HealthCheckResponse call() {
-        return HealthCheckResponse.up("Liveness successful-check");
+        return HealthCheckResponse.up("Startup successful-check");
     }
-    
+
 }
